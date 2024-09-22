@@ -1,23 +1,32 @@
 import { useState } from 'react';
 import Card from './Card';
+import Image1 from './Images/img1';
+import Image2 from './Images/img2';
+import Image3 from './Images/img3';
 
 function App() {
   const tutorialData = [
-    { title: 'Dedica moltes hores', 
+    { img: <Image1/>,
+      title: 'Dedica moltes hores', 
       description: `Un mínim de 30 hores a la semana. Si no en tens prou,
       hauràs de dedicar-li més hores. Al principi sembla impossible,
-       però notaràs una millora ràpidament.` },
+      però notaràs una millora ràpidament.`,
+      bgColor: 'bg-teal-600' },
 
-    { title: 'Programa projectes propis',
+    { img: <Image2 />,
+      title: 'Programa projectes propis',
       description: `Més val 10 hores treballant en projectes propis, 
       que 10 hores mirant tutorials. La motivació i la implicació en 
-      el projecte ajudarà a accelerar el teu aprenentatge.`
+      el projecte ajudarà a accelerar el teu aprenentatge.`,
+      bgColor: 'bg-slate-300'
     },
 
-    { title: 'Procura descansar',
+    { img: <Image3 />,
+      title: 'Procura descansar',
       description: `Descansa bé i desconectar són vitals. D'aquesta manera reduiràs
       l'estrès i l'ansietat. Milloraràs la teva concentració i consolidaràs el teu
-      aprenentatge.`
+      aprenentatge.`,
+      bgColor: 'bg-amber-300'
     }
   ];
 
@@ -29,14 +38,17 @@ function App() {
   };
 
   return (
-    <div>
+    
+    <div className="min-h-screen bg-gray-200 flex items-center justify-center p-4">
       <Card 
+      img={currentCardData.img}
       title={currentCardData.title} 
       description={currentCardData.description} 
       nextStep={nextStep}
+      bgColor={currentCardData.bgColor}
       />
-
     </div>
+    
   );
 }
 
