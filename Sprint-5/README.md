@@ -20,6 +20,7 @@ Este es un proyecto de ejemplo hecho con **React**, que presenta un conjunto de 
 ## Estructura del Proyecto
 
 /src │ ├── /Components │ 
+                       ├── Indicator.js # Componente dentro del componente Card |
                        ├── Card.js # Componente de la tarjeta individual │
                        └── App.js # Componente principal de la aplicación │ 
        ├── /Images # Carpeta de imágenes usadas │ 
@@ -28,5 +29,5 @@ Este es un proyecto de ejemplo hecho con **React**, que presenta un conjunto de 
                                                 └── img3.js │ 
 └── index.html # Punto de entrada de la aplicación
 
-![Vista general del proyecto](1K_NtY37NwjnaEolTzFhFhuLFy0j3xMySnQhu80PH_5ZOzXxF7dhEfswj5gVjzLUKeY8wPWHW5PGO45m6F-q4T0vnv02rhiR9OlpG74pvs7_BLHDIO28yyJdF2iDm2zFcWXl72Lx2OGMC4t1uMpXnNA.png)
+![Vista general del proyecto](src/assets/VistaGeneral.png)
 

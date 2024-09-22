@@ -51,6 +51,7 @@ function App() {
       description={currentCardData.description} 
       nextStep={nextStep}
       prevStep={prevStep}
+      tutorialData={tutorialData.length}
       step={step}
       bgColor={currentCardData.bgColor}
       />
