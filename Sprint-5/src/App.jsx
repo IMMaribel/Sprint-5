@@ -5,6 +5,7 @@ import Image2 from './Images/img2';
 import Image3 from './Images/img3';
 
 function App() {
+
   const tutorialData = [
     { img: <Image1/>,
       title: 'Dedica moltes hores', 
@@ -34,8 +35,12 @@ function App() {
   const currentCardData = tutorialData[step];
 
   const nextStep = () => {
-    setStep((prevStep) => (prevStep < tutorialData.length - 1 ? prevStep + 1 : prevStep));
+    setStep((nextStep) => (nextStep < tutorialData.length - 1 ? nextStep + 1 : nextStep));
   };
+
+  const prevStep = () => {
+    setStep((prevStep) => (prevStep >  0 ? prevStep -1 : prevStep));
+  }
 
   return (
     
@@ -45,6 +50,8 @@ function App() {
       title={currentCardData.title} 
       description={currentCardData.description} 
       nextStep={nextStep}
+      prevStep={prevStep}
+      step={step}
       bgColor={currentCardData.bgColor}
       />
     </div>
