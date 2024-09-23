@@ -13,14 +13,13 @@ const Bullet = styled.div`
 const IndicatorContainer = styled.div`
     display: flex;
     justify-content: start;
-    margin-bottom: 20px;
-    margin: 0 0 0 15px;
+    margin: 0 10px 45px;
 `;
 
 function Indicator ({tutorialData, step, setStep}) {
     return (
         <IndicatorContainer>
-            {Array.from({ length: tutorialData }).map((_, index) => (
+            {tutorialData.map((_, index) => (
                 <Bullet 
                 key={index} 
                 active={index === step} 

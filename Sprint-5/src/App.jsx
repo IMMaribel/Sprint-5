@@ -7,7 +7,7 @@ import Image3 from './Images/img3';
 function App() {
 
   const tutorialData = [
-    { img: <Image1/>,
+    { img: <Image1 />,
       title: 'Dedica moltes hores', 
       description: `Un mínim de 30 hores a la semana. Si no en tens prou,
       hauràs de dedicar-li més hores. Al principi sembla impossible,
@@ -44,17 +44,13 @@ function App() {
 
   return (
     
-    <div className="min-h-screen bg-gray-200 flex items-center justify-center p-4">
+    <div className="min-h-screen bg-gray-200 flex items-center justify-center">
       <Card 
-      img={currentCardData.img}
-      title={currentCardData.title} 
-      description={currentCardData.description} 
-      tutorialData={tutorialData.length}
+      tutorialData={tutorialData}
       step={step}
-      setSptep={setStep}
+      setStep={setStep}
       nextStep={nextStep}
       prevStep={prevStep}
-      bgColor={currentCardData.bgColor}
       />
     </div>
     
