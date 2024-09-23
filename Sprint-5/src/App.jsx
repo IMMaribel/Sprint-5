@@ -49,10 +49,11 @@ function App() {
       img={currentCardData.img}
       title={currentCardData.title} 
       description={currentCardData.description} 
-      nextStep={nextStep}
-      prevStep={prevStep}
       tutorialData={tutorialData.length}
       step={step}
+      setSptep={setStep}
+      nextStep={nextStep}
+      prevStep={prevStep}
       bgColor={currentCardData.bgColor}
       />
     </div>
